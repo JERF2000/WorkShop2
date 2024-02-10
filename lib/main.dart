@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:push_pop_application/Pages/Barcelona.dart';
+import 'package:push_pop_application/Pages/RealMadrid.dart';
 
 void main() {
   runApp(MiApp());
@@ -38,7 +40,7 @@ class _MyHomPage extends State<MyHomPage>{
 
           children: <Widget>[
 
-            Text("Selecione su Equipo"),
+            Text("Selecione un Equipo"),
 
             SizedBox(height: 10.0),
 
@@ -48,7 +50,10 @@ class _MyHomPage extends State<MyHomPage>{
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
               ),
               onPressed: (){
-
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (context)=> RealMadrid())
+                  );
               }, 
               child: Text("Real Madrid")
               ),
@@ -59,7 +64,10 @@ class _MyHomPage extends State<MyHomPage>{
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.black)
               ),
               onPressed: (){
-
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (context) => Barcelona()),
+                );
               }, 
               child: Text("Barcelona")
               ),

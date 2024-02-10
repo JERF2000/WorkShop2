@@ -7,7 +7,52 @@ class RealMadrid extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        title: Text(""),       
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(30.0),
+        child: Column(
+          children: <Widget>[
+        
+            Text("Real Madrid\n",
+              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+            ),
 
+            Text("El Real Madrid es una entidad polideportiva con sede en Madrid, España.\n"),
+        
+            Text("El Real Madrid fue fundado en 1902. Julián Palacios es el primer presidente, " + 
+            "pero fue Juan Padrós, catalán y de Barcelona, quien formalmente constituyó la " + 
+            "institución ese año. El interés en el fútbol crecía tanto en España que el Madrid " + 
+            "propuso realizar un torneo en honor al rey Alfonso XIII. La iniciativa se convirtió " + 
+            "en la Copa de España (Copa del Rey).\n"),
+        
+            Text("El Real Madrid es el rey de Europa y España y aunque los rivales han ido " + 
+            "y venido para enfrentarse a él en la historia del fútbol, nadie se acerca a su legado.\n"),
+        
+            Text("El estadio Santiago Bernabéu tiene una capacidad de 81.000 espectadores. " + 
+            "En torno a un 80% del aforo está ocupado por socios del Real Madrid que tienen un " + 
+            "abono, mientras que el resto de las entradas se venden al público general.\n"),
+        
+            SizedBox(height: 30.0,),
+
+            ElevatedButton(
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              ),
+              onPressed: (){
+                Navigator.pop(context);
+              }, 
+              child: Text("Volver")
+              )
+        
+        
+          ],
+        ),
+      ),
     );
   }
 }
